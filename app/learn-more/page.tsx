@@ -9,23 +9,23 @@ import Image from 'next/image';
 export default function LearnMorePage() {
   const achievements = [
     {
-      number: "2000+",
-      label: "Enterprise Customers",
+      // number: "2000+",
+      label: "Transforming Businesses ",
       icon: <Users className="h-6 w-6" />
     },
     {
-      number: "150+",
-      label: "Countries Served",
+      // number: "150+",
+      label: "Globally Served",
       icon: <Globe className="h-6 w-6" />
     },
     {
-      number: "95%",
+      // number: "95%",
       label: "Customer Satisfaction",
       icon: <Award className="h-6 w-6" />
     },
     {
-      number: "30+",
-      label: "Years of Innovation",
+      // number: "30+",
+      label: "Innovative Solutions",
       icon: <BarChart className="h-6 w-6" />
     }
   ];
@@ -34,21 +34,21 @@ export default function LearnMorePage() {
     {
       icon: <Target className="h-12 w-12" />,
       title: "Strategic Consulting",
-      content: "Our expert consultants work closely with your team to develop comprehensive digital transformation strategies tailored to your business objectives.",
+      content: "Our skilled consultants collaborate with your team to create detailed digital transformation plans customizes to your business goals.",
       benefits: [
-        "Digital Maturity Assessment",
-        "Technology Roadmap Planning",
-        "Change Management Strategy",
-        "ROI Analysis"
+        "Assessing Digital Maturity",
+        "Planning Technology Roadmaps",
+        "Developing Change Management Strategy",
+        "Conducting ROI Analysis"
       ],
       image: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
     },
     {
       icon: <Rocket className="h-12 w-12" />,
       title: "Implementation Excellence",
-      content: "We ensure smooth deployment and integration of solutions with your existing systems, minimizing disruption while maximizing value.",
+      content: "We guarentee seamless deployment and integration of solutions with your current systems, reducing disruption while enhancing value.",
       benefits: [
-        "Rapid Deployment",
+        "Swift Deployment",
         "System Integration",
         "Data Migration",
         "User Training"
@@ -58,9 +58,9 @@ export default function LearnMorePage() {
     {
       icon: <Shield className="h-12 w-12" />,
       title: "Managed Services",
-      content: "Comprehensive support and maintenance services to ensure your digital transformation initiatives continue to deliver value.",
+      content: "Holistic support and maintenance services to ensure your digital transformation efforts consistently provide value.",
       benefits: [
-        "24/7 Support",
+        "Round-the-CLock Support",
         "Performance Monitoring",
         "Security Management",
         "Regular Updates"
@@ -70,7 +70,7 @@ export default function LearnMorePage() {
     {
       icon: <Zap className="h-12 w-12" />,
       title: "Innovation Lab",
-      content: "Access to cutting-edge technologies and proof-of-concept development to keep you ahead of the competition.",
+      content: "Leverage stte-of-the-art technologies and proof-of-concept development to stay ahead of the curve.",
       benefits: [
         "Emerging Tech Research",
         "Prototype Development",
@@ -94,7 +94,7 @@ export default function LearnMorePage() {
               transition={{ duration: 0.8 }}
               className="text-4xl md:text-5xl font-bold mb-6 text-white"
             >
-              Accelerate Your Digital Transformation
+              Fast-track Your Digital Transformation
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -102,7 +102,7 @@ export default function LearnMorePage() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-xl text-white/90 mb-8"
             >
-              Discover how our comprehensive capabilities and proven expertise can transform your business.
+              Uncover the potential of your extensive skill and established expertise to revolutionize your business.
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -140,7 +140,7 @@ export default function LearnMorePage() {
                 className="text-center p-6 bg-gray-50 rounded-lg hover:shadow-md transition-shadow"
               >
                 <div className="text-saffron flex justify-center mb-4">{stat.icon}</div>
-                <div className="text-3xl font-bold mb-2 text-gray-900">{stat.number}</div>
+                {/* <div className="text-3xl font-bold mb-2 text-gray-900">{stat.number}</div> */}
                 <div className="text-gray-600">{stat.label}</div>
               </motion.div>
             ))}
@@ -152,9 +152,9 @@ export default function LearnMorePage() {
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4 text-gray-900">Our Comprehensive Capabilities</h2>
+            <h2 className="text-3xl font-bold mb-4 text-gray-900">Our Extensive Expertise</h2>
             <p className="text-lg text-gray-600">
-              End-to-end solutions tailored to your unique business challenges.
+              Customized, comprehensive solutions designed to meet your specific business needs.
             </p>
           </div>
 
@@ -196,7 +196,7 @@ export default function LearnMorePage() {
       </section>
 
       {/* Testimonial Section */}
-      <section className="py-16 bg-white">
+      {/* <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto bg-gray-50 p-8 rounded-lg">
             <div className="flex flex-col md:flex-row items-center gap-8">
@@ -220,15 +220,15 @@ export default function LearnMorePage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* CTA Section - Perfectly Fixed Buttons */}
       <section className="py-16 bg-saffron">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl font-bold text-bkack mb-6">Ready to Transform Your Business?</h2>
+            <h2 className="text-3xl font-bold text-bkack mb-6">Excited to Revolutionize Your Business?</h2>
             <p className="text-lg text-black/90 mb-8">
-              Let our experts show you how Newgen's digital transformation platform can help you achieve your business goals.
+            Our experts are here to demonstrate how Newgen's digital transformation platform can help you achieve your business objectives.
             </p>
                 <div className="flex flex-col sm:flex-row justify-center gap-4 w-full sm:w-auto mx-auto">
                 <Link href="/demo" className="w-full sm:w-auto">

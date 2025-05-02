@@ -1,30 +1,30 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { ArrowRight, Brain, Cpu, Network, Zap } from 'lucide-react';
+import { ArrowRight, Cpu, Network, Zap, Brain } from 'lucide-react';
 import { Button } from './ui/button';
 
 export function AboutSection() {
   const features = [
     {
-      icon: <Brain className="h-8 w-8" />,
-      title: "Process Automation",
-      description: "Streamline complex workflows with intelligent automation"
-    },
-    {
-      icon: <Network className="h-8 w-8" />,
-      title: "Content Services",
-      description: "Unified platform for content management and collaboration"
-    },
-    {
       icon: <Cpu className="h-8 w-8" />,
-      title: "Customer Engagement",
-      description: "Create seamless digital experiences for your customers"
+      title: "Process Automation",
+      description: "Boost productivity by automating complex operations"
     },
     {
       icon: <Zap className="h-8 w-8" />,
-      title: "Intelligence",
-      description: "AI-powered insights for informed decision making"
+      title: "Inovation",
+      description: "Our solution leverages cutting-edge invovation to drive exceptional results."
+    },
+    {
+      icon: <Network className="h-8 w-8" />,
+      title: "Technology Solutions",
+      description: "Boost productivity with technology solutions tailored for complex business needs."
+    },
+    {
+      icon: <Brain className="h-8 w-8" />,
+      title: "Artificial Intelligence",
+      description: "AI-enhanced insights for strategic decision-making."
     }
   ];
 
@@ -38,11 +38,12 @@ export function AboutSection() {
           transition={{ duration: 0.8 }}
           className="max-w-4xl mx-auto text-center mb-16"
         >
-          <h2 className="text-4xl font-bold mb-6">The ONE for Digital Transformation</h2>
+          <h2 className="text-4xl font-bold mb-6">Empowering Your Digital Journey</h2>
           <p className="text-xl text-gray-600 mb-8">
-            We simplify the most complex business processes by combining the power of process automation,
-            content services, customer engagement, and intelligence. Continuous innovation runs deep in
-            our product philosophy, helping us win over customers' hearts—every time they think digital.
+            We streamline intricate business operations by leveraging Process Automation, 
+            Technlogy Solutions and Artifical Intelligence. Our commitment to continious 
+            invoation is at the core of our product philosophy, ensuring and consistently
+            capture the hearts of our customers whenever they embrace digital solutions.
           </p>
           <div className="flex justify-center">
             <Button className="text-lg px-8 py-6" variant="outline">
@@ -77,16 +78,15 @@ export function AboutSection() {
         >
           <div className="max-w-3xl mx-auto text-center">
             <h3 className="text-2xl font-bold mb-6">
-              Leading Provider of Unified Digital Transformation
+              Robust Force In Unified Digital Advancement
             </h3>
             <p className="text-lg text-gray-600 mb-8">
-              Globally, successful enterprises rely on Newgen's industry-recognized low code application
-              platform to develop and deploy complex, content-driven, and customer-engaging business
-              applications on the cloud. From onboarding to service requests, lending to underwriting,
-              and for many more use cases across industries.
+             Worldwide, leading enterprises trust Indorse's tehcnology solutions
+             to develop and deploy intricate business processes. From onboarding 
+             to servide requests, and for numerous industry apllications.
             </p>
             <div className="inline-flex items-center text-primary font-semibold">
-              Newgen unlocks simple with speed and agility
+              Indorse simplefies business processes with unmatched speed and agility
             </div>
           </div>
         </motion.div>

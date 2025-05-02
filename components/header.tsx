@@ -19,32 +19,35 @@ const menuItems = [
     title: 'Products',
     path: '/products',
     items: [
-      { name: 'Digital Process Automation', path: '/products/dpa' },
-      { name: 'Content Services Platform', path: '/products/csp' },
-      { name: 'Customer Engagement Hub', path: '/products/ceh' },
-      { name: 'Contextual AI', path: '/products/ai' }
+      { name: 'Delivery Platform', path: '/products/dpa' },
+      { name: 'Scrib Product', path: '/products/csp' },
+      { name: 'Management Product', path: '/products/ceh' },
+      { name: 'Ticket Solution', path: '/products/ceh' },
+      { name: 'Community Connect', path: '/products/ceh' },
+      { name: 'AI Solutions', path: '/products/ai' },
+      { name: 'Support Products', path: '/products/ceh' }
     ],
   },
   {
-    title: 'Solutions',
+    title: 'Business',
     path: '/solutions',
     items: [
-      { name: 'Banking & Finance', path: '/solutions/banking' },
-      { name: 'Insurance', path: '/solutions/insurance' },
-      { name: 'Government', path: '/solutions/government' },
-      { name: 'Healthcare', path: '/solutions/healthcare' }
+      { name: 'Health Care', path: '/solutions/banking' },
+      { name: 'AI', path: '/solutions/insurance' },
+      { name: 'Commute/Logistics', path: '/solutions/government' },
+      { name: 'Social Media', path: '/solutions/healthcare' }
     ],
-  },
-  {
-    title: 'Resources',
-    path: '/resources',
-    items: [
-      { name: 'Case Studies', path: '/resources/case-studies' },
-      { name: 'Whitepapers', path: '/resources/whitepapers' },
-      { name: 'Webinars', path: '/resources/webinars' },
-      { name: 'Blog', path: '/resources/blog' }
-    ],
-  }
+  }//,
+  // {
+  //   title: 'Resources',
+  //   path: '/resources',
+  //   items: [
+  //     { name: 'Case Studies', path: '/resources/case-studies' },
+  //     { name: 'Whitepapers', path: '/resources/whitepapers' },
+  //     { name: 'Webinars', path: '/resources/webinars' },
+  //     { name: 'Blog', path: '/resources/blog' }
+  //   ],
+  // }
 ];
 
 export function Header() {
@@ -68,7 +71,7 @@ export function Header() {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           <Link href="/" className="flex items-center">
-            <span className="text-2xl font-bold text-saffron">Newgen</span>
+            <span className="text-2xl font-bold text-saffron">Indorse</span><span className='text-2xl font-bold text-white'>tech</span>
           </Link>
 
           {/* Desktop Navigation */}

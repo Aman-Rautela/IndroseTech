@@ -66,7 +66,8 @@ export function ContactSection() {
             <div>
               <h2 className="text-4xl font-bold mb-6">Get in Touch</h2>
               <p className="text-xl text-gray-600 mb-8">
-                Ready to transform your business? Let's discuss how we can help you achieve your digital transformation goals.
+                Excited to elevate your business? 
+                Let's exlore how we can support your digital transformation journey.
               </p>
               
               <div className="space-y-6">
@@ -74,7 +75,7 @@ export function ContactSection() {
                   <Phone className="h-6 w-6 text-primary mr-4" />
                   <div>
                     <h3 className="font-semibold">Call Us</h3>
-                    <p className="text-gray-600">+1 (888) 892-1234</p>
+                    <p className="text-gray-600">+91 8669039635</p>
                   </div>
                 </div>
                 

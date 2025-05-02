@@ -1,38 +1,40 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Building2, Briefcase, HeartPulse, Ban as Bank } from 'lucide-react';
+import { Network, Briefcase, HeartPulse, Brain } from 'lucide-react';
 import { Button } from './ui/button';
 import Link from 'next/link';
 
 export function SolutionsSection() {
   const solutions = [
     {
-      icon: <Bank className="h-12 w-12" />,
-      title: "Banking & Finance",
-      description: "Transform banking operations with intelligent automation and digital workflows",
-      features: ["Account Opening", "Lending", "Trade Finance", "Compliance"],
+      icon: <Network className="h-12 w-12" />,
+      title: "Social Media",
+      description: "Revolutionizing your growth with AI-powered, automated social media management",
+      features: ["Social Media Manager", "Hyper Local Interest Communities"],
       link: "/solutions/banking"
     },
     {
       icon: <Briefcase className="h-12 w-12" />,
-      title: "Insurance",
-      description: "Streamline insurance processes and enhance customer experience",
-      features: ["Claims Processing", "Policy Administration", "Underwriting", "Customer Service"],
+      title: "Commute/Logistics",
+      description: "Streamlining your commute with cutting-edge software solutions.",
+      features: ["Metro/Bus ticket Solutions"],
       link: "/solutions/insurance"
     },
     {
-      icon: <Building2 className="h-12 w-12" />,
-      title: "Government",
-      description: "Modernize government services with digital transformation solutions",
-      features: ["Citizen Services", "Records Management", "Compliance", "Process Automation"],
+      icon: <Brain className="h-12 w-12" />,
+      title: "AI",
+      description: "Empowring your future with innovative AI software solutions.",
+      features: ["Chat Support Agent for Businesses", "Paralegal (Doc Review)", "Courtroom Scribe", "Technical Documentation(API/SDK)"
+        , "Call Center AVI Voice Agent", "Online Test Drills/Exams preparations"
+      ],
       link: "/solutions/government"
     },
     {
       icon: <HeartPulse className="h-12 w-12" />,
       title: "Healthcare",
       description: "Improve healthcare delivery with digital solutions",
-      features: ["Patient Records", "Claims Management", "Compliance", "Care Coordination"],
+      features: ["Medical Scribe", "Medical Essentials Delivery For Providers"],
       link: "/solutions/healthcare"
     }
   ];
@@ -47,13 +49,13 @@ export function SolutionsSection() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl font-bold mb-6">Industry Solutions</h2>
+          <h2 className="text-4xl font-bold mb-6">Business Technology Solutions</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Discover how our digital transformation platform can revolutionize your industry
+            Explore how our digital transformation platform can transform your industry
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-2">
           {solutions.map((solution, index) => (
             <motion.div
               key={solution.title}
@@ -75,7 +77,7 @@ export function SolutionsSection() {
                 ))}
               </ul>
               <Link href={solution.link}>
-                <Button variant="ghost" className="mt-6 w-full hover:text-saffron">
+                <Button variant="ghost" className="mt-8 w-full hover:text-saffron">
                   Learn More
                 </Button>
               </Link>

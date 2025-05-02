@@ -35,9 +35,9 @@ export default function DemoPage() {
             className="max-w-4xl mx-auto"
           >
             <div className="text-center mb-16">
-              <h1 className="text-5xl font-bold mb-6">Request a Demo</h1>
+              <h1 className="text-5xl font-bold mb-6">Schedule a Demo</h1>
               <p className="text-xl text-gray-600">
-                See how Newgen's digital transformation platform can revolutionize your business operations.
+                Discover how Indorse's digital transformation platform can transform your business operations.
               </p>
             </div>
 
@@ -50,21 +50,22 @@ export default function DemoPage() {
                       <Clock className="h-6 w-6 text-saffron mr-4 mt-1" />
                       <div>
                         <h4 className="font-semibold mb-2">30-Minute Personalized Demo</h4>
-                        <p className="text-gray-600">Tailored presentation of features relevant to your business needs</p>
+                        <p className="text-gray-600">Customized showcase of features 
+                        aligned with your specific business requirements.</p>
                       </div>
                     </div>
                     <div className="flex items-start">
                       <Users className="h-6 w-6 text-saffron mr-4 mt-1" />
                       <div>
                         <h4 className="font-semibold mb-2">Expert Consultation</h4>
-                        <p className="text-gray-600">Discussion with our solution specialists about your specific requirements</p>
+                        <p className="text-gray-600">Consult with our solution expert to address  your unique needs.</p>
                       </div>
                     </div>
                     <div className="flex items-start">
                       <Calendar className="h-6 w-6 text-saffron mr-4 mt-1" />
                       <div>
                         <h4 className="font-semibold mb-2">Flexible Scheduling</h4>
-                        <p className="text-gray-600">Choose a time that works best for your team</p>
+                        <p className="text-gray-600">Select a convenient time for your team</p>
                       </div>
                     </div>
                   </div>
