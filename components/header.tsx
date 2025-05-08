@@ -19,23 +19,23 @@ const menuItems = [
     title: 'Products',
     path: '/products',
     items: [
-      { name: 'Delivery Platform', path: '/products/dpa' },
-      { name: 'Scrib Product', path: '/products/csp' },
-      { name: 'Management Product', path: '/products/ceh' },
-      { name: 'Ticket Solution', path: '/products/ceh' },
-      { name: 'Community Connect', path: '/products/ceh' },
+      { name: 'Delivery Platform', path: '/products/devp' },
+      { name: 'Scrib Product', path: '/products/sp' },
+      { name: 'Management Product', path: '/products/mgmtp' },
+      { name: 'Ticket Solution', path: '/products/tkts' },
+      { name: 'Community Connect', path: '/products/commc' },
       { name: 'AI Solutions', path: '/products/ai' },
-      { name: 'Support Products', path: '/products/ceh' }
+      { name: 'Support Products', path: '/products/supportp' }
     ],
   },
   {
     title: 'Business',
     path: '/solutions',
     items: [
-      { name: 'Health Care', path: '/solutions/banking' },
-      { name: 'AI', path: '/solutions/insurance' },
-      { name: 'Commute/Logistics', path: '/solutions/government' },
-      { name: 'Social Media', path: '/solutions/healthcare' }
+      { name: 'Health Care', path: '/solutions/healthc' },
+      { name: 'AI', path: '/solutions/ai' },
+      { name: 'Commute/Logistics', path: '/solutions/c&l' },
+      { name: 'Social Media', path: '/solutions/socialMedia' }
     ],
   }//,
   // {

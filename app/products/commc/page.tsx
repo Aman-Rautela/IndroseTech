@@ -2,30 +2,30 @@
 
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
-import { Bot, ArrowRight, Brain, MessageSquare, LineChart, Sparkles } from 'lucide-react';
+import { Users, ArrowRight, MessageSquare, Globe, Heart, Bell } from 'lucide-react';
 import Link from 'next/link';
 
-export default function AIPage() {
+export default function CommunityConnectPage() {
   const features = [
     {
-      icon: <Brain className="h-8 w-8" />,
-      title: "Machine Learning",
-      description: "Advanced algorithms that learn and improve from experience"
+      icon: <Users className="h-8 w-8" />,
+      title: "Member Engagement",
+      description: "Foster meaningful connections between community members"
     },
     {
       icon: <MessageSquare className="h-8 w-8" />,
-      title: "Natural Language Processing",
-      description: "Understand and process human language naturally"
+      title: "Discussion Forums",
+      description: "Create spaces for productive conversations and knowledge sharing"
     },
     {
-      icon: <LineChart className="h-8 w-8" />,
-      title: "Predictive Analytics",
-      description: "Forecast trends and make data-driven decisions"
+      icon: <Globe className="h-8 w-8" />,
+      title: "Global Networking",
+      description: "Connect members across locations and timezones"
     },
     {
-      icon: <Sparkles className="h-8 w-8" />,
-      title: "Intelligent Automation",
-      description: "Automate complex tasks with AI-powered decision making"
+      icon: <Heart className="h-8 w-8" />,
+      title: "Community Support",
+      description: "Build peer-to-peer assistance and mentorship programs"
     }
   ];
 
@@ -41,11 +41,11 @@ export default function AIPage() {
           >
             <div className="text-center mb-16">
               <div className="text-saffron flex justify-center mb-6">
-                <Bot className="h-16 w-16" />
+                <Users className="h-16 w-16" />
               </div>
-              <h1 className="text-5xl font-bold mb-6"> AI Solutions</h1>
+              <h1 className="text-5xl font-bold mb-6">Community Connect</h1>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Leverage artificial intelligence to make informed decisions and automate complex processes.
+                Empower your community with tools to engage, collaborate, and grow together.
               </p>
             </div>
 
@@ -68,7 +68,7 @@ export default function AIPage() {
             <div className="text-center">
               <Link href="/contact">
                 <Button className="btn-saffron text-lg px-8 py-6">
-                  Request a Demo <ArrowRight className="ml-2 h-5 w-5" />
+                  Build Your Community <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </Link>
             </div>

@@ -11,34 +11,34 @@ const searchDatabase = [
   {
     type: 'Product',
     icon: <FileText className="h-5 w-5" />,
-    title: 'Digital Process Automation',
-    description: 'Streamline and automate complex business processes.',
-    link: '/products#dpa',
-    keywords: ['automation', 'process', 'digital', 'workflow']
+    title: 'AI Business Automation',
+    description: 'Transform operations with AI-powered process automation.',
+    link: '/products#ai-automation',
+    keywords: ['AI', 'automation', 'business', 'process']
   },
   {
     type: 'Solution',
     icon: <Book className="h-5 w-5" />,
-    title: 'Banking Solutions',
-    description: 'Digital transformation solutions for banking sector.',
-    link: '/solutions#banking',
-    keywords: ['banking', 'finance', 'digital', 'transformation']
+    title: 'Enterprise AI Solutions',
+    description: 'Comprehensive AI solutions for large-scale businesses.',
+    link: '/solutions#enterprise-ai',
+    keywords: ['enterprise', 'AI', 'solutions', 'business']
   },
   {
     type: 'Webinar',
     icon: <Video className="h-5 w-5" />,
-    title: 'Future of Digital Banking',
-    description: 'Expert insights on emerging trends in digital banking.',
+    title: 'AI in Modern Business',
+    description: 'Learn how AI is transforming contemporary business practices.',
     link: '/resources#webinars',
-    keywords: ['webinar', 'banking', 'future', 'trends']
+    keywords: ['webinar', 'AI', 'business', 'transformation']
   },
   {
     type: 'Blog',
     icon: <Newspaper className="h-5 w-5" />,
-    title: 'AI in Process Automation',
-    description: 'How AI is transforming business process automation.',
+    title: 'Implementing AI Strategically',
+    description: 'Best practices for AI implementation in business contexts.',
     link: '/resources#blog',
-    keywords: ['AI', 'automation', 'process', 'machine learning']
+    keywords: ['AI', 'strategy', 'implementation', 'business']
   }
 ];
 
@@ -93,6 +93,7 @@ export default function SearchPage() {
     // Find matches in search database
     const dbMatches = searchDatabase.filter(item => 
       item.title.toLowerCase().includes(query.toLowerCase()) ||
+      item.description.toLowerCase().includes(query.toLowerCase()) ||
       item.keywords.some(keyword => 
         keyword.toLowerCase().includes(query.toLowerCase())
       )
@@ -178,9 +179,9 @@ export default function SearchPage() {
             className="max-w-4xl mx-auto"
           >
             <div className="text-center mb-12">
-              <h1 className="text-5xl font-bold mb-6">Search</h1>
+              <h1 className="text-5xl font-bold mb-6">Search AI Business Solutions</h1>
               <p className="text-xl text-gray-600">
-                Find products, solutions, and resources across our digital transformation platform.
+                Discover AI-powered products, enterprise solutions, and business resources.
               </p>
             </div>
 
@@ -189,7 +190,7 @@ export default function SearchPage() {
                 <div className="flex gap-4 relative">
                   <Input
                     type="search"
-                    placeholder="Search for products, solutions, or resources..."
+                    placeholder="Search AI solutions, business cases, or resources..."
                     className="text-lg py-6"
                     value={searchQuery}
                     onChange={(e) => {

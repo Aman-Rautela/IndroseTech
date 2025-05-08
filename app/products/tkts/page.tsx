@@ -2,30 +2,30 @@
 
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
-import { Cpu, ArrowRight, Users, Route, FormInput, PieChart } from 'lucide-react';
+import { Ticket, ArrowRight, Users, Clock, Layers, BarChart } from 'lucide-react';
 import Link from 'next/link';
 
-export default function CEHPage() {
+export default function TicketSolutionsPage() {
   const features = [
     {
+      icon: <Ticket className="h-8 w-8" />,
+      title: "Ticket Management",
+      description: "Streamline ticket creation, assignment, and resolution workflows"
+    },
+    {
       icon: <Users className="h-8 w-8" />,
-      title: "Omnichannel Communication",
-      description: "Deliver consistent experiences across all customer touchpoints"
+      title: "Multi-Channel Support",
+      description: "Centralize requests from email, chat, phone, and web into one platform"
     },
     {
-      icon: <Route className="h-8 w-8" />,
-      title: "Customer Journey Mapping",
-      description: "Design and optimize customer journeys for better engagement"
+      icon: <Clock className="h-8 w-8" />,
+      title: "SLA Monitoring",
+      description: "Automatically track and enforce service level agreements"
     },
     {
-      icon: <FormInput className="h-8 w-8" />,
-      title: "Digital Forms",
-      description: "Create dynamic forms for seamless data collection"
-    },
-    {
-      icon: <PieChart className="h-8 w-8" />,
-      title: "Communication Analytics",
-      description: "Track and analyze customer interactions for better insights"
+      icon: <BarChart className="h-8 w-8" />,
+      title: "Performance Analytics",
+      description: "Gain insights into resolution times, team performance, and ticket trends"
     }
   ];
 
@@ -41,11 +41,11 @@ export default function CEHPage() {
           >
             <div className="text-center mb-16">
               <div className="text-saffron flex justify-center mb-6">
-                <Cpu className="h-16 w-16" />
+                <Ticket className="h-16 w-16" />
               </div>
-              <h1 className="text-5xl font-bold mb-6">Customer Engagement Hub</h1>
+              <h1 className="text-5xl font-bold mb-6">Ticket Solutions</h1>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Create seamless, omnichannel customer experiences with our comprehensive engagement solutions.
+                Transform your support operations with our comprehensive ticketing system designed for efficiency and scalability.
               </p>
             </div>
 
@@ -68,7 +68,7 @@ export default function CEHPage() {
             <div className="text-center">
               <Link href="/contact">
                 <Button className="btn-saffron text-lg px-8 py-6">
-                  Request a Demo <ArrowRight className="ml-2 h-5 w-5" />
+                  Optimize Your Support <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </Link>
             </div>

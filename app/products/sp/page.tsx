@@ -2,30 +2,30 @@
 
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
-import { HeartPulse, ArrowRight, FileText, Users, Shield, BarChart } from 'lucide-react';
+import { PenTool, ArrowRight, FileText, Layers, Share2, BarChart } from 'lucide-react';
 import Link from 'next/link';
 
-export default function HealthcarePage() {
+export default function ScribProductPage() {
   const features = [
     {
-      icon: <FileText className="h-8 w-8" />,
-      title: "Patient Records Management",
-      description: "Secure digital management of patient health records"
+      icon: <PenTool className="h-8 w-8" />,
+      title: "Smart Authoring",
+      description: "AI-powered tools to help you create content faster and smarter"
     },
     {
-      icon: <Users className="h-8 w-8" />,
-      title: "Care Coordination",
-      description: "Streamline communication between healthcare providers"
+      icon: <Layers className="h-8 w-8" />,
+      title: "Structured Content",
+      description: "Organize your documentation with modular, reusable components"
     },
     {
-      icon: <Shield className="h-8 w-8" />,
-      title: "Compliance & Security",
-      description: "Maintain HIPAA compliance and data security"
+      icon: <Share2 className="h-8 w-8" />,
+      title: "Seamless Collaboration",
+      description: "Real-time co-authoring and review workflows for teams"
     },
     {
       icon: <BarChart className="h-8 w-8" />,
-      title: "Healthcare Analytics",
-      description: "Improve patient outcomes with data-driven insights"
+      title: "Content Analytics",
+      description: "Measure engagement and optimize your documentation strategy"
     }
   ];
 
@@ -41,11 +41,11 @@ export default function HealthcarePage() {
           >
             <div className="text-center mb-16">
               <div className="text-saffron flex justify-center mb-6">
-                <HeartPulse className="h-16 w-16" />
+                <FileText className="h-16 w-16" />
               </div>
-              <h1 className="text-5xl font-bold mb-6">Healthcare Solutions</h1>
+              <h1 className="text-5xl font-bold mb-6">Scrib Product</h1>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Transform healthcare delivery with our comprehensive digital solutions designed for modern healthcare providers.
+                Transform how organizations create, manage, and deliver technical content at scale.
               </p>
             </div>
 
@@ -68,7 +68,7 @@ export default function HealthcarePage() {
             <div className="text-center">
               <Link href="/contact">
                 <Button className="btn-saffron text-lg px-8 py-6">
-                  Get Started <ArrowRight className="ml-2 h-5 w-5" />
+                  Enhance Your Content <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </Link>
             </div>

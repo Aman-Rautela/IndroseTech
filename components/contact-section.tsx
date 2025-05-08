@@ -83,7 +83,7 @@ export function ContactSection() {
                   <Mail className="h-6 w-6 text-primary mr-4" />
                   <div>
                     <h3 className="font-semibold">Email Us</h3>
-                    <p className="text-gray-600">info@newgen.com</p>
+                    <p className="text-gray-600">arpitrautela01@indorsetech.com</p>
                   </div>
                 </div>
                 

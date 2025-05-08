@@ -16,26 +16,26 @@ export default function ContactPage() {
     setTimeout(() => setIsSubmitted(false), 3000);
   };
 
-  const offices = [
-    {
-      location: "New York",
-      address: "123 Business Avenue, NY 10001",
-      phone: "+1 (212) 555-0123",
-      email: "ny@newgen.com"
-    },
-    {
-      location: "London",
-      address: "456 Tech Street, London EC1A 1BB",
-      phone: "+44 20 7123 4567",
-      email: "london@newgen.com"
-    },
-    {
-      location: "Singapore",
-      address: "789 Innovation Road, Singapore 018956",
-      phone: "+65 6789 0123",
-      email: "singapore@newgen.com"
-    }
-  ];
+  // const offices = [
+  //   {
+  //     location: "New York",
+  //     address: "123 Business Avenue, NY 10001",
+  //     phone: "+1 (212) 555-0123",
+  //     email: "ny@newgen.com"
+  //   },
+  //   {
+  //     location: "London",
+  //     address: "456 Tech Street, London EC1A 1BB",
+  //     phone: "+44 20 7123 4567",
+  //     email: "london@newgen.com"
+  //   },
+  //   {
+  //     location: "Singapore",
+  //     address: "789 Innovation Road, Singapore 018956",
+  //     phone: "+65 6789 0123",
+  //     email: "singapore@newgen.com"
+  //   }
+  // ];
 
   return (
     <div className="pt-20">
@@ -61,7 +61,7 @@ export default function ContactPage() {
                     <Phone className="h-6 w-6 text-saffron mr-4" />
                     <div>
                       <h3 className="font-semibold">Call Us</h3>
-                      <p className="text-gray-600">+1 (888) 892-1234</p>
+                      <p className="text-gray-600">+91 8669039635</p>
                     </div>
                   </div>
                   
@@ -69,7 +69,7 @@ export default function ContactPage() {
                     <Mail className="h-6 w-6 text-saffron mr-4" />
                     <div>
                       <h3 className="font-semibold">Email Us</h3>
-                      <p className="text-gray-600">info@newgen.com</p>
+                      <p className="text-gray-600">arpitrautela01@indorsetech.com</p>
                     </div>
                   </div>
                   
@@ -90,7 +90,7 @@ export default function ContactPage() {
                   </div>
                 </div>
 
-                <div className="space-y-6">
+                {/* <div className="space-y-6">
                   <h3 className="text-2xl font-semibold mb-4">Global Offices</h3>
                   {offices.map((office) => (
                     <div key={office.location} className="bg-gray-50 p-4 rounded-lg">
@@ -111,7 +111,7 @@ export default function ContactPage() {
                       </div>
                     </div>
                   ))}
-                </div>
+                </div> */}
               </div>
               
               <div className="bg-gray-50 p-8 rounded-xl">

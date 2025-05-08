@@ -2,30 +2,30 @@
 
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
-import { Workflow, ArrowRight, CheckCircle2, Settings, Zap, BarChart } from 'lucide-react';
+import { BrainCircuit, ArrowRight, Bot, BarChart, Shield, Sparkles } from 'lucide-react';
 import Link from 'next/link';
 
-export default function DPAPage() {
+export default function AIBusinessPage() {
   const features = [
     {
-      icon: <Settings className="h-8 w-8" />,
-      title: "Low-Code Process Modeling",
-      description: "Design and deploy complex workflows with intuitive drag-and-drop interfaces"
-    },
-    {
-      icon: <Zap className="h-8 w-8" />,
-      title: "Business Rules Engine",
-      description: "Implement and manage business logic with powerful rule-based processing"
+      icon: <Bot className="h-8 w-8" />,
+      title: "Intelligent Automation",
+      description: "Streamline operations with AI-powered process automation"
     },
     {
       icon: <BarChart className="h-8 w-8" />,
-      title: "Process Analytics",
-      description: "Gain insights with real-time monitoring and advanced analytics"
+      title: "Predictive Analytics",
+      description: "Anticipate market trends and customer needs with data-driven insights"
     },
     {
-      icon: <CheckCircle2 className="h-8 w-8" />,
-      title: "Mobile-Enabled Workflows",
-      description: "Access and manage processes on any device, anywhere"
+      icon: <Shield className="h-8 w-8" />,
+      title: "AI Security",
+      description: "Protect your business with intelligent threat detection systems"
+    },
+    {
+      icon: <Sparkles className="h-8 w-8" />,
+      title: "Customer Intelligence",
+      description: "Enhance engagement with AI-driven personalization"
     }
   ];
 
@@ -41,11 +41,11 @@ export default function DPAPage() {
           >
             <div className="text-center mb-16">
               <div className="text-saffron flex justify-center mb-6">
-                <Workflow className="h-16 w-16" />
+                <BrainCircuit className="h-16 w-16" />
               </div>
-              <h1 className="text-5xl font-bold mb-6">Digital Process Automation</h1>
+              <h1 className="text-5xl font-bold mb-6">AI for Business Transformation</h1>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Transform your business operations with intelligent automation solutions that streamline workflows and boost efficiency.
+                Leverage cutting-edge artificial intelligence to drive innovation, efficiency and competitive advantage across your organization.
               </p>
             </div>
 
@@ -68,7 +68,7 @@ export default function DPAPage() {
             <div className="text-center">
               <Link href="/contact">
                 <Button className="btn-saffron text-lg px-8 py-6">
-                  Request a Demo <ArrowRight className="ml-2 h-5 w-5" />
+                  Transform Your Business <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </Link>
             </div>

@@ -2,30 +2,30 @@
 
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
-import { Bot, ArrowRight, Brain, MessageSquare, LineChart, Sparkles } from 'lucide-react';
+import { Truck, ArrowRight, Package, Clock, MapPin, Sparkles } from 'lucide-react';
 import Link from 'next/link';
 
 export default function AIPage() {
   const features = [
     {
-      icon: <Brain className="h-8 w-8" />,
-      title: "Machine Learning",
-      description: "Advanced algorithms that learn and improve from experience"
+      icon: <Truck className="h-8 w-8" />,
+      title: "Fast Delivery",
+      description: "Get your packages delivered quickly with our efficient network"
     },
     {
-      icon: <MessageSquare className="h-8 w-8" />,
-      title: "Natural Language Processing",
-      description: "Understand and process human language naturally"
+      icon: <Package className="h-8 w-8" />,
+      title: "Package Tracking",
+      description: "Real-time tracking for all your shipments from pickup to delivery"
     },
     {
-      icon: <LineChart className="h-8 w-8" />,
-      title: "Predictive Analytics",
-      description: "Forecast trends and make data-driven decisions"
+      icon: <Clock className="h-8 w-8" />,
+      title: "Scheduled Deliveries",
+      description: "Choose delivery times that work best for your schedule"
     },
     {
-      icon: <Sparkles className="h-8 w-8" />,
-      title: "Intelligent Automation",
-      description: "Automate complex tasks with AI-powered decision making"
+      icon: <MapPin className="h-8 w-8" />,
+      title: "Route Optimization",
+      description: "Smart routing technology ensures the fastest delivery paths"
     }
   ];
 
@@ -41,11 +41,11 @@ export default function AIPage() {
           >
             <div className="text-center mb-16">
               <div className="text-saffron flex justify-center mb-6">
-                <Bot className="h-16 w-16" />
+                <Truck className="h-16 w-16" />
               </div>
-              <h1 className="text-5xl font-bold mb-6"> AI Solutions</h1>
+              <h1 className="text-5xl font-bold mb-6">Delivery Platform</h1>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Leverage artificial intelligence to make informed decisions and automate complex processes.
+                Streamline your logistics with our advanced delivery management system for fast and reliable shipping.
               </p>
             </div>
 
@@ -68,7 +68,7 @@ export default function AIPage() {
             <div className="text-center">
               <Link href="/contact">
                 <Button className="btn-saffron text-lg px-8 py-6">
-                  Request a Demo <ArrowRight className="ml-2 h-5 w-5" />
+                  Request Demo <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </Link>
             </div>

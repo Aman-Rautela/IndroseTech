@@ -2,30 +2,30 @@
 
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
-import { Building2, ArrowRight, FileText, Users, Shield, BarChart } from 'lucide-react';
+import { Bus, ArrowRight, MapPin, Route, Clock, TrafficCone } from 'lucide-react';
 import Link from 'next/link';
 
-export default function GovernmentPage() {
+export default function CommutePage() {
   const features = [
     {
-      icon: <FileText className="h-8 w-8" />,
-      title: "Citizen Services",
-      description: "Streamline citizen service delivery with digital workflows"
+      icon: <Route className="h-8 w-8" />,
+      title: "Route Optimization",
+      description: "Smart algorithms to find the most efficient routes for public transit"
     },
     {
-      icon: <Users className="h-8 w-8" />,
-      title: "Records Management",
-      description: "Secure digital management of government records and documents"
+      icon: <Clock className="h-8 w-8" />,
+      title: "Real-time Tracking",
+      description: "Live updates on vehicle locations and estimated arrival times"
     },
     {
-      icon: <Shield className="h-8 w-8" />,
-      title: "Compliance Management",
-      description: "Ensure regulatory compliance with automated tracking"
+      icon: <TrafficCone className="h-8 w-8" />,
+      title: "Traffic Management",
+      description: "Monitor and manage traffic flow with intelligent systems"
     },
     {
-      icon: <BarChart className="h-8 w-8" />,
-      title: "Performance Analytics",
-      description: "Monitor and improve service delivery with real-time analytics"
+      icon: <MapPin className="h-8 w-8" />,
+      title: "Smart Infrastructure",
+      description: "Integrated solutions for bus stops, stations, and transit hubs"
     }
   ];
 
@@ -41,11 +41,11 @@ export default function GovernmentPage() {
           >
             <div className="text-center mb-16">
               <div className="text-saffron flex justify-center mb-6">
-                <Building2 className="h-16 w-16" />
+                <Bus className="h-16 w-16" />
               </div>
-              <h1 className="text-5xl font-bold mb-6">Government Solutions</h1>
+              <h1 className="text-5xl font-bold mb-6">Commute & Logistics Solutions</h1>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Transform public service delivery with our comprehensive digital solutions for government agencies.
+                Revolutionize urban mobility and transportation with our smart logistics and commute management platform.
               </p>
             </div>
 

@@ -2,30 +2,30 @@
 
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
-import { Briefcase, ArrowRight, FileCheck, Users, ClipboardCheck, BarChart } from 'lucide-react';
+import { Settings, ArrowRight, Users, Layers, BarChart, Shield } from 'lucide-react';
 import Link from 'next/link';
 
-export default function InsurancePage() {
+export default function ManagementProductPage() {
   const features = [
     {
-      icon: <FileCheck className="h-8 w-8" />,
-      title: "Claims Processing",
-      description: "Automate claims processing for faster resolution and better customer experience"
+      icon: <Settings className="h-8 w-8" />,
+      title: "Unified Management",
+      description: "Centralized control for all your business operations and workflows"
     },
     {
       icon: <Users className="h-8 w-8" />,
-      title: "Policy Administration",
-      description: "Streamline policy lifecycle management with digital workflows"
+      title: "Team Collaboration",
+      description: "Streamline team coordination with integrated task management"
     },
     {
-      icon: <ClipboardCheck className="h-8 w-8" />,
-      title: "Underwriting",
-      description: "Risk assessment and underwriting automation for better decisions"
+      icon: <Layers className="h-8 w-8" />,
+      title: "Process Automation",
+      description: "Automate repetitive tasks to boost operational efficiency"
     },
     {
       icon: <BarChart className="h-8 w-8" />,
-      title: "Agent Portal",
-      description: "Digital platform for agent enablement and productivity"
+      title: "Performance Analytics",
+      description: "Real-time insights to drive data-driven decision making"
     }
   ];
 
@@ -41,11 +41,11 @@ export default function InsurancePage() {
           >
             <div className="text-center mb-16">
               <div className="text-saffron flex justify-center mb-6">
-                <Briefcase className="h-16 w-16" />
+                <Shield className="h-16 w-16" />
               </div>
-              <h1 className="text-5xl font-bold mb-6">Insurance Solutions</h1>
+              <h1 className="text-5xl font-bold mb-6">Management Product</h1>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Modernize your insurance operations with our comprehensive digital transformation solutions.
+                The complete solution to streamline, automate, and optimize your business operations.
               </p>
             </div>
 
@@ -68,7 +68,7 @@ export default function InsurancePage() {
             <div className="text-center">
               <Link href="/contact">
                 <Button className="btn-saffron text-lg px-8 py-6">
-                  Get Started <ArrowRight className="ml-2 h-5 w-5" />
+                  Optimize Your Operations <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </Link>
             </div>

@@ -45,11 +45,11 @@ export function AboutSection() {
             invoation is at the core of our product philosophy, ensuring and consistently
             capture the hearts of our customers whenever they embrace digital solutions.
           </p>
-          <div className="flex justify-center">
+          {/* <div className="flex justify-center">
             <Button className="text-lg px-8 py-6" variant="outline">
               Learn More About Us <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
-          </div>
+          </div> */}
         </motion.div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">

@@ -2,30 +2,30 @@
 
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
-import { Ban as Bank, ArrowRight, CreditCard, Building2, Shield, LineChart } from 'lucide-react';
+import { Headset, ArrowRight, LifeBuoy, Zap, Shield, BarChart } from 'lucide-react';
 import Link from 'next/link';
 
-export default function BankingPage() {
+export default function SupportProductsPage() {
   const features = [
     {
-      icon: <CreditCard className="h-8 w-8" />,
-      title: "Digital Account Opening",
-      description: "Streamline customer onboarding with automated account opening processes"
+      icon: <Headset className="h-8 w-8" />,
+      title: "24/7 Customer Support",
+      description: "Round-the-clock assistance across multiple channels"
     },
     {
-      icon: <Building2 className="h-8 w-8" />,
-      title: "Loan Origination",
-      description: "End-to-end loan processing with intelligent automation"
+      icon: <LifeBuoy className="h-8 w-8" />,
+      title: "Self-Service Portal",
+      description: "Knowledge base and FAQs to empower customers"
+    },
+    {
+      icon: <Zap className="h-8 w-8" />,
+      title: "Rapid Response",
+      description: "AI-powered triage for faster resolution times"
     },
     {
       icon: <Shield className="h-8 w-8" />,
-      title: "Regulatory Compliance",
-      description: "Stay compliant with automated regulatory reporting and checks"
-    },
-    {
-      icon: <LineChart className="h-8 w-8" />,
-      title: "Trade Finance",
-      description: "Digitize and automate trade finance operations"
+      title: "Secure Support",
+      description: "Enterprise-grade security for all customer interactions"
     }
   ];
 
@@ -41,11 +41,11 @@ export default function BankingPage() {
           >
             <div className="text-center mb-16">
               <div className="text-saffron flex justify-center mb-6">
-                <Bank className="h-16 w-16" />
+                <LifeBuoy className="h-16 w-16" />
               </div>
-              <h1 className="text-5xl font-bold mb-6">Banking & Financial Services</h1>
+              <h1 className="text-5xl font-bold mb-6">Support Products</h1>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Transform your banking operations with our comprehensive digital solutions designed for the modern financial sector.
+                Transform customer experiences with our comprehensive suite of support solutions.
               </p>
             </div>
 
@@ -68,7 +68,7 @@ export default function BankingPage() {
             <div className="text-center">
               <Link href="/contact">
                 <Button className="btn-saffron text-lg px-8 py-6">
-                  Get Started <ArrowRight className="ml-2 h-5 w-5" />
+                  Enhance Your Support <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </Link>
             </div>
