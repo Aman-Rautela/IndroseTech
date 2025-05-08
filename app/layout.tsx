@@ -5,8 +5,8 @@ import { Header } from '@/components/header';
 import { Toaster } from "@/components/ui/toaster";
 
 export const metadata: Metadata = {
-  title: 'Newgen Software - Digital Transformation Platform',
-  description: 'Transform your enterprise with intelligent automation solutions from Newgen Software.',
+  title: 'Indorsetech - Digital Transformation Platform',
+  description: 'Transform your enterprise with intelligent automation solutions from Indorsetech.',
 };
 
 export default function RootLayout({
