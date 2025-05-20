@@ -69,7 +69,7 @@ export default function AboutPage() {
             <div className="text-center mb-16">
               <h1 className="text-5xl font-bold mb-6">About Newgen</h1>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                A global provider of digital transformation platform helping enterprises innovate and transform their operations.
+              A global provider of digital transformation platform helping enterprises innovate and transform their operations.
               </p>
             </div>
 
@@ -118,7 +118,7 @@ export default function AboutPage() {
             <div className="text-center mt-16">
               <Link href="/contact">
                 <Button className="btn-saffron text-lg px-8 py-6">
-                  Get Started with Newgen
+                  Get Started with IndorseTech
                 </Button>
               </Link>
             </div>

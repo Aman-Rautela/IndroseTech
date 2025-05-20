@@ -24,9 +24,14 @@ export function SolutionsSection() {
     {
       icon: <Brain className="h-12 w-12" />,
       title: "AI",
-      description: "Empowring your future with innovative AI software solutions.",
-      features: ["Chat Support Agent for Businesses", "Paralegal (Doc Review)", "Courtroom Scribe", "Technical Documentation(API/SDK)"
-        , "Call Center AVI Voice Agent", "Online Test Drills/Exams preparations"
+      description: "Empowering your future with innovative AI software solutions.",
+      features: [
+        "Chat Support Agent for Businesses", 
+        "Paralegal (Doc Review)", 
+        "Courtroom Scribe", 
+        "Technical Documentation(API/SDK)",
+        "Call Center AVI Voice Agent", 
+        "Online Test Drills/Exams preparations"
       ],
       link: "/solutions/government"
     },

@@ -66,8 +66,8 @@ export function ContactSection() {
             <div>
               <h2 className="text-4xl font-bold mb-6">Get in Touch</h2>
               <p className="text-xl text-gray-600 mb-8">
-                Excited to elevate your business? 
-                Let's exlore how we can support your digital transformation journey.
+              Excited to elevate your business?  
+Let's explore how we can support your digital transformation journey. 
               </p>
               
               <div className="space-y-6">

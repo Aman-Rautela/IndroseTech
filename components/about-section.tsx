@@ -13,8 +13,8 @@ export function AboutSection() {
     },
     {
       icon: <Zap className="h-8 w-8" />,
-      title: "Inovation",
-      description: "Our solution leverages cutting-edge invovation to drive exceptional results."
+      title: "Innovation",
+      description: "Our solution leverages cutting-edge innovation to drive exceptional results. "
     },
     {
       icon: <Network className="h-8 w-8" />,
@@ -40,10 +40,10 @@ export function AboutSection() {
         >
           <h2 className="text-4xl font-bold mb-6">Empowering Your Digital Journey</h2>
           <p className="text-xl text-gray-600 mb-8">
-            We streamline intricate business operations by leveraging Process Automation, 
-            Technlogy Solutions and Artifical Intelligence. Our commitment to continious 
-            invoation is at the core of our product philosophy, ensuring and consistently
-            capture the hearts of our customers whenever they embrace digital solutions.
+          We streamline intricate business operations by leveraging Process Automation,  
+          Technology Solutions and Artificial Intelligence. Our commitment to continuous  
+          innovation is at the core of our product philosophy, ensuring and consistently 
+          capture the hearts of our customers whenever they embrace digital solutions. 
           </p>
           {/* <div className="flex justify-center">
             <Button className="text-lg px-8 py-6" variant="outline">
@@ -81,12 +81,12 @@ export function AboutSection() {
               Robust Force In Unified Digital Advancement
             </h3>
             <p className="text-lg text-gray-600 mb-8">
-             Worldwide, leading enterprises trust Indorse's tehcnology solutions
-             to develop and deploy intricate business processes. From onboarding 
-             to servide requests, and for numerous industry apllications.
+            Worldwide, leading enterprises trust Indorse's technology solutions 
+to develop and deploy intricate business processes. From onboarding  
+to service requests, and for numerous industry applications. 
             </p>
             <div className="inline-flex items-center text-primary font-semibold">
-              Indorse simplefies business processes with unmatched speed and agility
+            Indorse simplifies business processes with unmatched speed and agility 
             </div>
           </div>
         </motion.div>

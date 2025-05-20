@@ -228,7 +228,7 @@ export default function LearnMorePage() {
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-bold text-bkack mb-6">Excited to Revolutionize Your Business?</h2>
             <p className="text-lg text-black/90 mb-8">
-            Our experts are here to demonstrate how Newgen's digital transformation platform can help you achieve your business objectives.
+            Our experts are here to demonstrate how Indorse's digital transformation platform can help you achieve your business objectives.
             </p>
                 <div className="flex flex-col sm:flex-row justify-center gap-4 w-full sm:w-auto mx-auto">
                 <Link href="/demo" className="w-full sm:w-auto">

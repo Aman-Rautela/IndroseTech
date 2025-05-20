@@ -13,6 +13,7 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from '@/components/ui/navigation-menu';
+import { usePathname } from 'next/navigation';
 
 const menuItems = [
   {
@@ -37,22 +38,14 @@ const menuItems = [
       { name: 'Commute/Logistics', path: '/solutions/c&l' },
       { name: 'Social Media', path: '/solutions/socialMedia' }
     ],
-  }//,
-  // {
-  //   title: 'Resources',
-  //   path: '/resources',
-  //   items: [
-  //     { name: 'Case Studies', path: '/resources/case-studies' },
-  //     { name: 'Whitepapers', path: '/resources/whitepapers' },
-  //     { name: 'Webinars', path: '/resources/webinars' },
-  //     { name: 'Blog', path: '/resources/blog' }
-  //   ],
-  // }
+  }
 ];
 
 export function Header() {
+  const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const isHomePage = pathname === '/';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -61,6 +54,9 @@ export function Header() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  // Determine text color based on scroll state and page
+  const techTextColor = !isHomePage || isScrolled ? 'text-black' : 'text-white';
 
   return (
     <header
@@ -71,7 +67,8 @@ export function Header() {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           <Link href="/" className="flex items-center">
-            <span className="text-2xl font-bold text-saffron">Indorse</span><span className='text-2xl font-bold text-white'>tech</span>
+            <span className="text-2xl font-bold text-saffron">Indorse</span>
+            <span className={`text-2xl font-bold ${techTextColor}`}>tech</span>
           </Link>
 
           {/* Desktop Navigation */}

@@ -58,14 +58,14 @@ export default function DemoPage() {
                       <Users className="h-6 w-6 text-saffron mr-4 mt-1" />
                       <div>
                         <h4 className="font-semibold mb-2">Expert Consultation</h4>
-                        <p className="text-gray-600">Consult with our solution expert to address  your unique needs.</p>
+                        <p className="text-gray-600">Consult with our solution expert to address your unique needs.</p>
                       </div>
                     </div>
                     <div className="flex items-start">
                       <Calendar className="h-6 w-6 text-saffron mr-4 mt-1" />
                       <div>
                         <h4 className="font-semibold mb-2">Flexible Scheduling</h4>
-                        <p className="text-gray-600">Select a convenient time for your team</p>
+                        <p className="text-gray-600">Select a convenient time for your team.</p>
                       </div>
                     </div>
                   </div>
@@ -118,7 +118,7 @@ export default function DemoPage() {
                   <div>
                     <label className="block text-sm font-medium mb-2">Additional Notes</label>
                     <Textarea 
-                      placeholder="Tell us about your specific requirements or areas of interest"
+                      placeholder="Tell us about your specific requirements or areas of interest."
                       className="h-32"
                     />
                   </div>
