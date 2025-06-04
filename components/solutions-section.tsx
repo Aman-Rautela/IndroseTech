@@ -60,7 +60,7 @@ export function SolutionsSection() {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-2">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {solutions.map((solution, index) => (
             <motion.div
               key={solution.title}
@@ -68,21 +68,23 @@ export function SolutionsSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-white rounded-xl p-8 hover:shadow-xl transition-shadow"
+              className="bg-white rounded-xl p-8 hover:shadow-xl transition-shadow flex flex-col h-full"
             >
               <div className="text-primary mb-6">{solution.icon}</div>
               <h3 className="text-2xl font-semibold mb-4">{solution.title}</h3>
               <p className="text-gray-600 mb-6">{solution.description}</p>
-              <ul className="space-y-3">
+              
+              <ul className="space-y-3 mb-6 flex-grow">
                 {solution.features.map((feature) => (
-                  <li key={feature} className="text-gray-700 flex items-center">
-                    <span className="w-2 h-2 bg-primary rounded-full mr-3"></span>
-                    {feature}
+                  <li key={feature} className="flex items-start">
+                    <span className="inline-block w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                    <span className="text-gray-700">{feature}</span>
                   </li>
                 ))}
               </ul>
-              <Link href={solution.link}>
-                <Button variant="ghost" className="mt-8 w-full hover:text-saffron">
+
+              <Link href={solution.link} className="mt-auto">
+                <Button variant="ghost" className="w-full hover:text-saffron">
                   Learn More
                 </Button>
               </Link>

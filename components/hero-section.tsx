@@ -30,24 +30,31 @@ const heroItems = [
 ];
 
 const FloatingEmoji = ({ emoji, index }: { emoji: string; index: number }) => {
+  const positions = [
+    { x: 30, y: 40 },
+    { x: -20, y: 60 },
+    { x: 50, y: -10 }
+  ];
+  const pos = positions[index % positions.length];
+  
   return (
     <motion.div
       className="text-3xl absolute"
       initial={{
         opacity: 0,
         scale: 0,
-        x: Math.random() * 100 - 50,
-        y: Math.random() * 100 - 50
+        x: pos.x,
+        y: pos.y
       }}
       animate={{
         opacity: [0, 1, 0],
-        scale: [0, Math.random() + 0.5, 0],
-        x: Math.random() * 200 - 100,
-        y: Math.random() * 200 - 100,
-        rotate: Math.random() * 360
+        scale: [0, 1.3, 0],
+        x: pos.x * 2,
+        y: pos.y * 2,
+        rotate: 360
       }}
       transition={{
-        duration: Math.random() * 10 + 10,
+        duration: 10,
         repeat: Infinity,
         repeatType: 'reverse',
         delay: index * 0.5
@@ -62,23 +69,20 @@ export function HeroSection() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isHovering, setIsHovering] = useState(false);
   const constraintsRef = useRef(null);
+  const [isMounted, setIsMounted] = useState(false);
 
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     if (!isHovering) {
-  //       setCurrentIndex((prev) => (prev + 1) % heroItems.length);
-  //     }
-  //   }, 5000);
-  //   return () => clearInterval(interval);
-  // }, [isHovering]);
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % heroItems.length);
-    }, 5000); // Rotates every 5 seconds
+      if (!isHovering) {
+        setCurrentIndex((prev) => (prev + 1) % heroItems.length);
+      }
+    }, 5000);
     return () => clearInterval(interval);
-  }, []);
-
+  }, [isHovering]);
 
   const handleDotClick = (index: number) => {
     setCurrentIndex(index);
@@ -91,16 +95,30 @@ export function HeroSection() {
       onMouseLeave={() => setIsHovering(false)}
       ref={constraintsRef}
     >
-      {/* Particle Explosion Effect */}
-      <div className="absolute inset-0 overflow-hidden z-0">
-        {heroItems[currentIndex].particles.map((emoji, i) => (
-          <FloatingEmoji key={i} emoji={emoji} index={i} />
-        ))}
+      {/* Background Image Carousel - FULLY VISIBLE */}
+      <div className="absolute inset-0 z-0">
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={currentIndex}
+            initial={{ x: '100%' }}
+            animate={{ x: '0%' }}
+            exit={{ x: '-100%' }}
+            transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+            className="absolute inset-0"
+            style={{
+              backgroundImage: `url(${heroItems[currentIndex].bgImage})`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              backgroundRepeat: 'no-repeat'
+            }}
+          />
+        </AnimatePresence>
       </div>
 
-      {/* Animated Liquid Gradient */}
+      {/* Light Gradient Overlay */}
       <motion.div
         className={`absolute inset-0 z-0 bg-gradient-to-br ${heroItems[currentIndex].color}`}
+        style={{ opacity: 0.2 }}
         animate={{
           backgroundPosition: ['0% 0%', '100% 100%'],
         }}
@@ -112,65 +130,55 @@ export function HeroSection() {
         }}
       />
 
-      {/* Interactive Floating Shapes */}
-      <motion.div
-        className="absolute inset-0 z-0 overflow-hidden"
-        animate={{
-          opacity: [0.3, 0.6, 0.3],
-        }}
-        transition={{
-          duration: 15,
-          repeat: Infinity,
-          repeatType: 'reverse'
-        }}
-      >
-        {[1, 2, 3].map((i) => (
+      {/* Client-side only elements */}
+      {isMounted && (
+        <>
+          {/* Particle Effects */}
+          <div className="absolute inset-0 overflow-hidden z-0">
+            {heroItems[currentIndex].particles.map((emoji, i) => (
+              <FloatingEmoji key={i} emoji={emoji} index={i} />
+            ))}
+          </div>
+
+          {/* Floating Shapes */}
           <motion.div
-            key={i}
-            className="absolute border-2 border-white/20 rounded-full"
-            style={{
-              width: `${Math.random() * 300 + 100}px`,
-              height: `${Math.random() * 300 + 100}px`,
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-            }}
-            drag
-            dragConstraints={constraintsRef}
-            dragTransition={{ bounceStiffness: 100, bounceDamping: 10 }}
+            className="absolute inset-0 z-0 overflow-hidden"
             animate={{
-              x: [0, Math.random() * 200 - 100],
-              y: [0, Math.random() * 200 - 100],
-              rotate: Math.random() * 360
+              opacity: [0.3, 0.6, 0.3],
             }}
             transition={{
-              duration: Math.random() * 20 + 20,
+              duration: 15,
               repeat: Infinity,
               repeatType: 'reverse'
             }}
-          />
-        ))}
-      </motion.div>
-
-      {/* Background Image Carousel */}
-      <div className="absolute inset-0 z-0">
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={currentIndex}
-            initial={{ opacity: 0, scale: 1.2 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.8 }}
-            transition={{ duration: 1.5, ease: [0.22, 1, 0.36, 1] }}
-            className="absolute inset-0"
-            style={{
-              backgroundImage: `url(${heroItems[currentIndex].bgImage})`,
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-            }}
           >
-            <div className="absolute inset-0 bg-black/40" />
+            {[1, 2, 3].map((i) => (
+              <motion.div
+                key={i}
+                className="absolute border-2 border-white/20 rounded-full"
+                style={{
+                  width: `${150 + i * 100}px`,
+                  height: `${150 + i * 50}px`,
+                  left: `${20 + i * 20}%`,
+                  top: `${10 + i * 25}%`,
+                }}
+                drag
+                dragConstraints={constraintsRef}
+                animate={{
+                  x: [0, i % 2 ? 50 : -50],
+                  y: [0, i % 3 ? 30 : -30],
+                  rotate: 360
+                }}
+                transition={{
+                  duration: 20 + i * 5,
+                  repeat: Infinity,
+                  repeatType: 'reverse'
+                }}
+              />
+            ))}
           </motion.div>
-        </AnimatePresence>
-      </div>
+        </>
+      )}
 
       {/* Content */}
       <div className="container mx-auto px-4 z-10 text-white">
@@ -184,10 +192,10 @@ export function HeroSection() {
               transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
             >
               <motion.h1 
-                className="text-4xl md:text-6xl font-bold mb-6"
+                className="text-4xl md:text-6xl font-bold mb-6 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]"
                 whileHover={{
                   scale: 1.02,
-                  textShadow: '0 0 10px rgba(255,255,255,0.5)'
+                  textShadow: '0 0 15px rgba(0,0,0,0.7)'
                 }}
               >
                 {heroItems[currentIndex].title.split(' ').map((word, i) => (
@@ -203,7 +211,7 @@ export function HeroSection() {
                 ))}
               </motion.h1>
               <motion.p 
-                className="text-xl md:text-2xl mb-8"
+                className="text-xl md:text-2xl mb-8 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]"
                 whileHover={{ scale: 1.01 }}
               >
                 {heroItems[currentIndex].subtitle}
@@ -211,7 +219,7 @@ export function HeroSection() {
             </motion.div>
           </AnimatePresence>
 
-          {/* Holographic Buttons */}
+          {/* Buttons */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -221,15 +229,15 @@ export function HeroSection() {
             <Link href="/demo">
               <Button 
                 size="lg" 
-                className="text-lg px-8 relative overflow-hidden group bg-transparent border-2 border-white/30 hover:border-white/80"
+                className="text-lg px-8 relative overflow-hidden group bg-white/10 backdrop-blur-sm border-2 border-white/30 hover:border-white/80"
               >
                 <motion.span
-                  className="absolute inset-0 bg-white/10"
+                  className="absolute inset-0 bg-white/20"
                   initial={{ x: '-100%' }}
                   whileHover={{ x: '100%' }}
                   transition={{ duration: 0.6 }}
                 />
-                <motion.span className="relative z-10 flex items-center">
+                <span className="relative z-10 flex items-center">
                   Request Demo
                   <motion.div
                     className="ml-2"
@@ -244,34 +252,28 @@ export function HeroSection() {
                     }}
                   >
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                      <motion.path
+                      <path
                         d="M12 2C6.477 2 2 6.477 2 12C2 17.523 6.477 22 12 22C17.523 22 22 17.523 22 12C22 6.477 17.523 2 12 2Z"
                         stroke="currentColor"
                         strokeWidth="2"
-                        initial={{ pathLength: 0, rotate: 0 }}
-                        animate={{ pathLength: 1, rotate: 360 }}
-                        transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
                       />
-                      <motion.path
+                      <path
                         d="M8 12L12 16L16 12"
                         stroke="currentColor"
                         strokeWidth="2"
                         strokeLinecap="round"
                         strokeLinejoin="round"
-                        initial={{ pathLength: 0 }}
-                        animate={{ pathLength: 1 }}
-                        transition={{ duration: 1, repeat: Infinity }}
                       />
                     </svg>
                   </motion.div>
-                </motion.span>
+                </span>
               </Button>
             </Link>
             <Link href="/learn-more">
-            <Button 
+              <Button 
                 size="lg" 
                 variant="outline"
-                className="text-lg px-8 relative overflow-hidden group bg-transparent border-2 border-white/30 hover:border-white/80"
+                className="text-lg px-8 relative overflow-hidden group bg-white/5 backdrop-blur-sm border-2 border-white/30 hover:border-white/80"
               >
                 <motion.span
                   className="absolute inset-0 bg-white/10"
@@ -302,9 +304,9 @@ export function HeroSection() {
         </div>
       </div>
 
-      {/* Cyberpunk Scroll Indicator */}
+      {/* Scroll Indicator */}
       <motion.div
-        className="absolute bottom-8 left-1/2 transform-translate-x-1/2 cursor-pointer z-20"
+        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 cursor-pointer z-20"
         whileHover={{ scale: 1.2 }}
         whileTap={{ scale: 0.9 }}
       >
@@ -320,23 +322,10 @@ export function HeroSection() {
           className="flex flex-col items-center"
         >
           <motion.div
-            className="text-sm mb-2 font-mono tracking-widest"
-            animate={{
-              opacity: [0.6, 1, 0.6],
-              textShadow: ['0 0 5px rgba(255,255,255,0)', '0 0 10px rgba(255,255,255,0.8)', '0 0 5px rgba(255,255,255,0)']
-            }}
-            transition={{
-              duration: 2,
-              repeat: Infinity,
-            }}
-          >
-            {/* SCROLL ↓ */}
-          </motion.div>
-          <motion.div
-            className="w-6 h-10 border-2 border-saffron rounded-full flex items-start justify-center p-1 relative"
+            className="w-6 h-10 border-2 border-white rounded-full flex items-start justify-center p-1 relative"
           >
             <motion.div
-              className="w-1 h-3 bg-saffron rounded-full"
+              className="w-1 h-3 bg-white rounded-full"
               animate={{
                 y: [0, 8, 0],
               }}
@@ -347,7 +336,7 @@ export function HeroSection() {
               }}
             />
             <motion.div
-              className="absolute inset-0 rounded-full border-2 border-saffron/30"
+              className="absolute inset-0 rounded-full border-2 border-white/30"
               animate={{
                 scale: [1, 1.5, 1],
                 opacity: [0.5, 0.2, 0.5]
@@ -361,7 +350,7 @@ export function HeroSection() {
         </motion.div>
       </motion.div>
 
-      {/* Futuristic Dot Navigation */}
+      {/* Dot Navigation */}
       <div className="absolute bottom-8 right-8 flex gap-3 z-20">
         {heroItems.map((_, index) => (
           <button
@@ -383,7 +372,7 @@ export function HeroSection() {
             />
             {currentIndex === index && (
               <motion.div
-                className="absolute inset-0 rounded-full bg-saffron"
+                className="absolute inset-0 rounded-full bg-white"
                 initial={{ scale: 0 }}
                 animate={{ scale: 1 }}
                 transition={{ type: 'spring', stiffness: 500, damping: 30 }}
@@ -398,7 +387,7 @@ export function HeroSection() {
         ))}
       </div>
 
-      {/* Animated Grid Overlay */}
+      {/* Grid Overlay */}
       <motion.div
         className="absolute inset-0 z-0 pointer-events-none"
         initial={{ opacity: 0 }}

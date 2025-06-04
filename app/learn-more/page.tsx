@@ -60,7 +60,7 @@ export default function LearnMorePage() {
       title: "Managed Services",
       content: "Holistic support and maintenance services to ensure your digital transformation efforts consistently provide value.",
       benefits: [
-        "Round-the-CLock Support",
+        "Round-the-Clock Support",
         "Performance Monitoring",
         "Security Management",
         "Regular Updates"
@@ -70,7 +70,7 @@ export default function LearnMorePage() {
     {
       icon: <Zap className="h-12 w-12" />,
       title: "Innovation Lab",
-      content: "Leverage stte-of-the-art technologies and proof-of-concept development to stay ahead of the curve.",
+      content: "Leverage state-of-the-art technologies and proof-of-concept development to stay ahead of the curve.",
       benefits: [
         "Emerging Tech Research",
         "Prototype Development",
