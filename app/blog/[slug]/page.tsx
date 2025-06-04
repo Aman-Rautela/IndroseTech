@@ -135,14 +135,20 @@ const blogPosts = {
   }
 };
 
-export function generateStaticParams() {
+export async function generateStaticParams() {
   return Object.keys(blogPosts).map((slug) => ({
     slug,
   }));
 }
 
-export default function BlogPostPage({ params }: { params: { slug: string } }) {
-  const post = blogPosts[params.slug as keyof typeof blogPosts];
+interface PageProps {
+  params: {
+    slug: keyof typeof blogPosts;
+  };
+}
+
+export default async function BlogPostPage({ params }: PageProps) {
+  const post = blogPosts[params.slug];
 
   if (!post) {
     notFound();
