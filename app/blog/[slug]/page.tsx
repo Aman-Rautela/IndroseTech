@@ -143,12 +143,12 @@ export async function generateStaticParams() {
 
 interface PageProps {
   params: {
-    slug: keyof typeof blogPosts;
+    slug: string;
   };
 }
 
-export default async function BlogPostPage({ params }: PageProps) {
-  const post = blogPosts[params.slug];
+export default function BlogPostPage({ params }: PageProps) {
+  const post = blogPosts[params.slug as keyof typeof blogPosts];
 
   if (!post) {
     notFound();
