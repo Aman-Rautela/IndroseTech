@@ -143,15 +143,15 @@ export async function generateStaticParams() {
   }));
 }
 
-// ✅ Define prop type for clarity
+// ✅ Fixed type for compatibility with Next.js
 type BlogPostPageProps = {
   params: {
-    slug: keyof typeof blogPosts;
+    slug: string;
   };
 };
 
 export default function BlogPostPage({ params }: BlogPostPageProps) {
-  const post = blogPosts[params.slug];
+  const post = blogPosts[params.slug as keyof typeof blogPosts];
 
   if (!post) {
     notFound();
