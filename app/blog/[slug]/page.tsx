@@ -1,9 +1,10 @@
+// app/blog/[slug]/page.tsx
+
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { Calendar, User, ArrowLeft } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
-// This would typically come from a database or CMS
 const blogPosts = {
   'the-future-of-work-ai-and-automation': {
     title: "The Future of Work: AI and Automation",
@@ -135,19 +136,21 @@ const blogPosts = {
   }
 };
 
+// ✅ Make it async to fix Vercel build type error
 export async function generateStaticParams() {
   return Object.keys(blogPosts).map((slug) => ({
     slug,
   }));
 }
 
-interface PageProps {
+// ✅ Define prop type for clarity
+type BlogPostPageProps = {
   params: {
     slug: keyof typeof blogPosts;
   };
-}
+};
 
-export default async function BlogPostPage({ params }: PageProps) {
+export default function BlogPostPage({ params }: BlogPostPageProps) {
   const post = blogPosts[params.slug];
 
   if (!post) {
@@ -171,7 +174,7 @@ export default async function BlogPostPage({ params }: PageProps) {
                 {post.category}
               </div>
               <h1 className="text-4xl font-bold mb-6">{post.title}</h1>
-              
+
               <div className="flex items-center gap-6 text-gray-600 mb-8">
                 <div className="flex items-center">
                   <User className="h-4 w-4 mr-2" />
@@ -186,7 +189,7 @@ export default async function BlogPostPage({ params }: PageProps) {
             </div>
 
             <div className="prose prose-lg max-w-none">
-              {post.content.split('\n\n').map((paragraph, index) => (
+              {post.content.trim().split('\n\n').map((paragraph, index) => (
                 <p key={index} className="mb-6 text-gray-700 leading-relaxed">
                   {paragraph}
                 </p>
