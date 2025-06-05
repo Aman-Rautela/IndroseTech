@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { Calendar, User, ArrowLeft } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
-// This would typically come from a database or CMS
+// Blog posts data
 const blogPosts = {
   'the-future-of-work-ai-and-automation': {
     title: "The Future of Work: AI and Automation",
@@ -141,13 +141,7 @@ export async function generateStaticParams() {
   }));
 }
 
-interface PageProps {
-  params: {
-    slug: string;
-  };
-}
-
-export default function BlogPostPage({ params }: PageProps) {
+export default function BlogPostPage({ params }: { params: { slug: string } }) {
   const post = blogPosts[params.slug as keyof typeof blogPosts];
 
   if (!post) {
