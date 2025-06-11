@@ -12,14 +12,14 @@ export function SolutionsSection() {
       title: "Social Media",
       description: "Revolutionizing your growth with AI-powered, automated social media management",
       features: ["Social Media Manager", "Hyper Local Interest Communities"],
-      link: "/solutions/banking"
+      link: "/solutions/socialMedia"
     },
     {
       icon: <Briefcase className="h-12 w-12" />,
       title: "Commute/Logistics",
       description: "Streamlining your commute with cutting-edge software solutions.",
       features: ["Metro/Bus ticket Solutions"],
-      link: "/solutions/insurance"
+      link: "/solutions/c&l"
     },
     {
       icon: <Brain className="h-12 w-12" />,
@@ -33,14 +33,14 @@ export function SolutionsSection() {
         "Call Center AVI Voice Agent", 
         "Online Test Drills/Exams preparations"
       ],
-      link: "/solutions/government"
+      link: "/solutions/ai"
     },
     {
       icon: <HeartPulse className="h-12 w-12" />,
       title: "Healthcare",
       description: "Improve healthcare delivery with digital solutions",
       features: ["Medical Scribe", "Medical Essentials Delivery For Providers"],
-      link: "/solutions/healthcare"
+      link: "/solutions/healthc"
     }
   ];
 
