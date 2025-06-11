@@ -134,11 +134,11 @@ export function HeroSection() {
       {isMounted && (
         <>
           {/* Particle Effects */}
-          <div className="absolute inset-0 overflow-hidden z-0">
+          {/* <div className="absolute inset-0 overflow-hidden z-0">
             {heroItems[currentIndex].particles.map((emoji, i) => (
               <FloatingEmoji key={i} emoji={emoji} index={i} />
             ))}
-          </div>
+          </div> */}
 
           {/* Floating Shapes */}
           <motion.div
