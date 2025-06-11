@@ -46,7 +46,7 @@ export default function LearnMorePage() {
     {
       icon: <Rocket className="h-12 w-12" />,
       title: "Implementation Excellence",
-      content: "We guarentee seamless deployment and integration of solutions with your current systems, reducing disruption while enhancing value.",
+      content: "We guarantee seamless deployment and integration of solutions with your current systems, reducing disruption while enhancing value.",
       benefits: [
         "Swift Deployment",
         "System Integration",
